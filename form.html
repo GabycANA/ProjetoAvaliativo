@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Formulário</title>
+	<title>Página inicial</title>
 	<link rel="stylesheet" type="text/css" href="_css/stilo.css">
+    <script src="validacoes.js"></script>
 </head>
 <body>
    <h1>Fomulário</h1>
-   <a href="index.html">Página inicial</a>
-</form>
-    <p> Nome</p>
-    <input type="text" name="nome">
-    <p>Email</p>
-    <input type:"email" name="Email" placeholder="email@gmail.com">
-    <p>Celular</p>
-    <input type="tel" name="celular" placeholder="(xx) xxxx-xxxx">
-    <p>CPF</p>
-    <input type="text" name="cpf">
-    <p>Assunto</p>
-    <input type="text" name="assunto">
-    <p>Descrição</p>
-    <input type="text" name="descrição">
-    <p><button>Enviar</button></p> 
+   <a href="index.html">Inicio</a>
+        <form>
+            <h2>PESSOAIS</h2>
+            <p> Nome</p>
+            <input type="text" id="nome" name="nome">
+            <p>Sobrenome</p>
+            <input type="text" id="sobrenome" name="sobrenome">
+            <p>Data de Nascimento</p>
+            <input type="text" id="dataNascimento" name="data de nascimento" placeholder="dd/mm/aaaa">
+           <p>Idade</p>
+           <input type="text" id="idade" name="idade">
+            <p>Nacionalidade</p>
+            <input type="text" id="nacionalidade" name="nacionalidade">
+            <p>Email</p>
+            <input type="email" id="email" name="email" placeholder="email@gmail.com">
+            <p>Senha</p>
+            <input type="password" id="senha" name="senha">
+            <p>CPF</p>
+            <input type="text" id="cpf" name="cpf">
+            <p>Gênero</p>
+            <input type="text" id="genero" name="gênero">
+            <h2>ENDEREÇO</h2>
+            <p>CEP</p>
+            <input type="text" id="cep" name="cep">
+            <p>Endereço</p>
+            <input type="text" id="endereco" name="endereço">
+            <p>Fone</p>
+            <input type="tel" id="fone" name="fone" onblur="maskFone()" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlengt="11">
+            <p>Complemento</p>
+            <input type="text" id="complemento" name="complemento">
+            <p>Bairro</p>
+            <input type="text" id="bairro" name="bairro">
+            <p>Cidade</p>
+            <input type="text" id="cidade" name="cidade">
+            <p>Estado</p>
+            <input type="text" id="estado" name="estado">
+            <p><button class="btn btn-primary" onclick="verificar()">CADASTRAR</button></p>
 
+        </form>
 </body>
 </html
